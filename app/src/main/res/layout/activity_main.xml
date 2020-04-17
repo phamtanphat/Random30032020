@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    tools:ignore="Autofill,HardcodedText,TextFields" >
+    tools:ignore="Autofill,HardcodedText,TextFields">
 
     <TextView
     android:layout_marginTop="10dp"
@@ -21,18 +19,18 @@
     <EditText
         android:hint="Nhập số bắt đầu"
         android:layout_marginTop="20dp"
-        android:id="@+id/edittextSomin"
+        android:id="@+id/edittextSobatdau"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <EditText
         android:hint="Nhập số kết thúc"
         android:layout_marginTop="20dp"
-        android:id="@+id/edittextSomax"
+        android:id="@+id/edittextSoKetthuc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <Button
         android:text="Random"
-        android:id="@+id/buttonRandom"
+        android:id="@+id/buttonNgaunhien"
         android:layout_marginTop="50dp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
