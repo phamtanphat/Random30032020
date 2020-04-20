@@ -17,12 +17,16 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"/>
     <EditText
+        android:maxLength="5"
+        android:inputType="number"
         android:hint="Nhập số bắt đầu"
         android:layout_marginTop="20dp"
         android:id="@+id/edittextSobatdau"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <EditText
+        android:maxLength="5"
+        android:inputType="number"
         android:hint="Nhập số kết thúc"
         android:layout_marginTop="20dp"
         android:id="@+id/edittextSoKetthuc"
