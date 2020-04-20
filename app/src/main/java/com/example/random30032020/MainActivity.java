@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     int mSobatdau,mSoketthuc;
     int mKetqua = 0;
     String mValueKetqua = "";
-
+    ArrayList<Integer> mArrayNumbers;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnChoilai = findViewById(R.id.buttonChoilai);
 
         mRandom = new Random();
+        mArrayNumbers = new ArrayList<>();
         // Task 1 : Khi nhấn random các giá trị xuất ra sẽ không trùng
             // Xử lý cho người dùng add các số vào 1 mảng
                 // UI : Thêm 1 button add mảng , thêm 1 button reset để người dùng thay đổi
@@ -46,22 +47,13 @@ public class MainActivity extends AppCompatActivity {
         // Task 2 : Khi nhấn random
 //                    + Khi còn dữ liệu : 1 - 2 - 3 - 4 -
 //                    + Khi hết dữ liệu : 1 - 2 - 3 - 4 - 5
-        ArrayList<String> arrayNames = new ArrayList<>();
-        //Them dữ liệu vào mảng
-        arrayNames.add("A");
-        arrayNames.add("B");
-        arrayNames.add("C");
-        arrayNames.add("D");
-        // Cập nhật dữ liệu
-//        arrayNames.set(0 , "E");
-        // Xóa dữ liệu
-        arrayNames.remove(0);
-        Log.d("BBB",arrayNames.get(3) + "");
 
+        if (mArrayNumbers.size() == 0){
+            mBtnChoilai.setEnabled(false);
+            mBtnNgaunhien.setEnabled(false);
+        }
 
-
-
-        mBtnNgaunhien.setOnClickListener(new View.OnClickListener() {
+        mBtnThemSo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mTextSobatdau = mEdtSobatdau.getText().toString();
@@ -77,6 +69,21 @@ public class MainActivity extends AppCompatActivity {
                     mSoketthuc = mSobatdau + 1;
                     mEdtSoketthuc.setText(mSoketthuc + "");
                 }
+                for (int i = mSobatdau ; i <= mSoketthuc ; i++){
+                    mArrayNumbers.add(i);
+                }
+                if (mArrayNumbers.size() > 0){
+                    mBtnChoilai.setEnabled(true);
+                    mBtnNgaunhien.setEnabled(true);
+                    mBtnThemSo.setEnabled(false);
+                }
+            }
+        });
+
+        mBtnNgaunhien.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
                 // 1 - 4 - 6 - 10 - 10 - 11
                 mKetqua = mRandom.nextInt(mSoketthuc - mSobatdau + 1) + mSobatdau;
                 mTvKetqua.append(mKetqua + " - ");
