@@ -31,6 +31,15 @@ public class MainActivity extends AppCompatActivity {
         mTvKetqua = findViewById(R.id.textviewKetqua);
 
         mRandom = new Random();
+        // Task 1 : Khi nhấn random các giá trị xuất ra sẽ không trùng
+            // Xử lý cho người dùng add các số vào 1 mảng
+                // UI : Thêm 1 button add mảng , thêm 1 button reset để người dùng thay đổi
+                // Code : Tìm hiểu về arraylist để xử lý cho mảng
+            // Khi random xong xóa nó khỏi mảng để không bị trùng giá trị
+
+        // Task 2 : Khi nhấn random
+//                    + Khi còn dữ liệu : 1 - 2 - 3 - 4 -
+//                    + Khi hết dữ liệu : 1 - 2 - 3 - 4 - 5
 
         mBtnNgaunhien.setOnClickListener(new View.OnClickListener() {
             @Override

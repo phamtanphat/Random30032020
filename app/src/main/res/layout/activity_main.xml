@@ -8,14 +8,14 @@
     tools:ignore="Autofill,HardcodedText,TextFields">
 
     <TextView
-    android:layout_marginTop="10dp"
-    android:textStyle="bold"
-    android:textSize="30sp"
-    android:textColor="#f20"
-    android:text="GAME LOTO"
-    android:layout_gravity="center"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="#f20"
+        android:text="GAME LOTO"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
     <EditText
         android:maxLength="5"
         android:inputType="number"
@@ -32,6 +32,27 @@
         android:id="@+id/edittextSoKetthuc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_marginLeft="30dp"
+            android:text="Thêm số"
+            android:id="@+id/buttonThemso"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_marginRight="30dp"
+            android:layout_alignParentEnd="true"
+            android:text="Chơi lại"
+            android:id="@+id/buttonChoilai"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
     <Button
         android:text="Random"
         android:id="@+id/buttonNgaunhien"
